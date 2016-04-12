@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project name="WritingAntTaskDemo" default="theTarget">
+
+	<target name="theTarget">
+
+		<echo message="Begin to run the target..." />
+
+		<taskdef name="myTask" classname="jet.demo.task.MyTask">
+		</taskdef>
+
+		<myTask>
+			<myTaskConfig>
+				<message id="Mesg1" content="this is message One." />
+				<message id="Mesg2" content="this is message Two." />
+				<message id="Mesg3" content="this is message Thress." />
+				<description id="DescOne" content="this is my description." />
+			</myTaskConfig>
+		</myTask>
+		
+	</target>
+
+</project>

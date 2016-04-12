@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/patternConfig"
+	xmlns:tns="http://www.example.org/patternConfig" elementFormDefault="qualified">
+
+    <complexType name="MyTaskConfig">
+    	<sequence>
+    		<element name="message" type="tns:Message" maxOccurs="unbounded"
+    			minOccurs="0">
+    		</element>
+    		<element name="description" type="tns:Description"
+    			maxOccurs="1" minOccurs="1">
+    		</element>
+    	</sequence>
+    	<attribute name="id" type="string"></attribute>
+    </complexType>
+
+    <element name="myTaskConfig" type="tns:MyTaskConfig"></element>
+
+    <complexType name="Message">
+    	<attribute name="id" type="string"></attribute>
+    	<attribute name="content" type="string"></attribute>
+    </complexType>
+    
+    <complexType name="Description">
+    	<attribute name="id" type="string"></attribute>
+    	<attribute name="content" type="string"></attribute>
+    </complexType>
+
+</schema>
